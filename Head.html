@@ -1,0 +1,75 @@
+<!-- 进度条 -->
+<div id="top-progress-bar" style="position: fixed; top: 0px; left: 0px; right: 0px; background-color: rgb(244, 67, 54); height: 2px; width: 0%; transition: width 0.2s ease 0s, opacity 0.6s ease 0s;"></div>
+<!-- 右上角github-->
+<!-----
+<a href="https://github.com/TNTtian" target="_blank">
+　　<img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1;" src="http://images.cnblogs.com/cnblogs_com/jackson0714/779808/o_github.png" >
+</a>
+----->
+<!-----打赏----->
+<script>
+window.tctipConfig = {
+        imagePrefix: "http://files.cnblogs.com/files/kdy11",
+        cssPrefix:     "http://files.cnblogs.com/files/kdy11",
+        buttonImageId:  4,
+        buttonTip:  "dashang",
+        list:{
+            alipay: {qrimg: "https://images.cnblogs.com/cnblogs_com/-TNT-/1794554/o_200627091930%E6%9A%82%E4%B8%8D%E6%94%AF%E6%8C%81.PNG"},
+            weixin:{qrimg: "https://images.cnblogs.com/cnblogs_com/-TNT-/1794554/o_200627091930%E6%9A%82%E4%B8%8D%E6%94%AF%E6%8C%81.PNG"},//https://images.cnblogs.com/cnblogs_com/-TNT-/1794785/o_200628012033%E6%8D%95%E8%8E%B7.PNG
+        }
+};
+
+</script>
+<script src="https://files.cnblogs.com/files/-TNT-/dashang.js"></script>
+<!----->
+<link href="https://files.cnblogs.com/files/-TNT-/font-awesome.min.css" rel="stylesheet">
+
+<!--- 雪花 --->
+<div class="Snow">
+    <canvas id="Snow"></canvas>
+</div>
+<script src="https://files.cnblogs.com/files/yjlblog/xue.js"></script>
+
+<script>
+     document.addEventListener('visibilitychange', function() {
+      var isHidden = document.hidden;
+      if (isHidden) {
+       document.title = 'QAQ';
+      } else {
+       document.title = '你回来惹QwQ';
+      }
+     });
+</script>
+
+
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("分块","Splay","莫队","主席树","CDQ分治","三维偏序","回滚莫队","二维线段树","线段树","Treap","AVL Tree","zkw线段树","树状数组","前向星","STL");
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!--回到顶部图标-->
