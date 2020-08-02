@@ -1,0 +1,54 @@
+<!--- 原公告 --->
+<div class="dashboard">
+        <!----
+	<a href="https://i.cnblogs.com/EditPosts.aspx?opt=1" title="新随笔"><i aria-hidden="true" class="fa fa-book fa-fw"></i></a>
+	<a href="https://msg.cnblogs.com/send/Trotyl°" title="联系"><i aria-hidden="true" class="fa fa-comment fa-fw"></i></a>
+	<a href="http://www.cnblogs.com/-TNT-/rss" title="订阅"><i aria-hidden="true" class="fa fa-rss fa-fw"></i></a>
+	<a href="https://i.cnblogs.com/" title="管理"><i aria-hidden="true" class="fa fa-cog fa-fw"></i></a>
+        ---->
+</div>
+<!--- 现公告（一言）--->
+<!-- 一言 -->
+<div style="font-size: 1em; line-height: 1.5em;" id="hitokoto-content"> </div>
+<div style="text-align: right; margin-top: 10px; font-size: 0.9em;" id="hitokoto-from"> </div>
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn/?c=a')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var h_content = document.getElementById('hitokoto-content');
+      var h_from = document.getElementById('hitokoto-from');
+      h_content.innerText = data.hitokoto; 
+      h_from.innerText = "——" + data.from; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+<!--- 一言 end --->
+<style type="text/css">
+.dashboard{
+    background: #fff;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+.dashboard a{
+    color: #5a5f69;
+    float: left;
+    width: calc(25% - 4px);
+    height: 51px;
+    display: block;
+    font-size: 26px;
+    line-height: 51px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 2px;
+}
+</style>
+
+<!--- 运势 --->
